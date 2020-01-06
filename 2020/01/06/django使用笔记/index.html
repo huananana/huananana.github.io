@@ -5,12 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - TaoJzyi</title>
+    <title>django使用笔记 - TaoJzyi</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="С��������,Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,"> 
+    <meta name="description" content="С��������,django笔记[TOC]
+Django框架1.开启django——Web前端之路1)第三方托管代码平台Gitee -创建数据仓库
+步骤一：https://gitee.com/ 注册账号
+步骤二：
+,"> 
     <meta name="author" content="Jzyi"> 
     <link rel="alternative" href="atom.xml" title="TaoJzyi" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -40,7 +44,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="http://huananana.github.io"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">Hello World</h3>
+    <h3 class="subtitle">django使用笔记</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -58,26 +62,58 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">django使用笔记</h1>
         <div class="stuff">
-            <span>十二月 30, 2019</span>
+            <span>一月 06, 2020</span>
             
 
         </div>
         <div class="content markdown">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <h1 id="django笔记"><a href="#django笔记" class="headerlink" title="django笔记"></a>django笔记</h1><p>[TOC]</p>
+<h2 id="Django框架"><a href="#Django框架" class="headerlink" title="Django框架"></a>Django框架</h2><h3 id="1-开启django——Web前端之路"><a href="#1-开启django——Web前端之路" class="headerlink" title="1.开启django——Web前端之路"></a>1.开启django——Web前端之路</h3><h6 id="1-第三方托管代码平台Gitee-创建数据仓库"><a href="#1-第三方托管代码平台Gitee-创建数据仓库" class="headerlink" title="1)第三方托管代码平台Gitee -创建数据仓库"></a>1)第三方托管代码平台Gitee -创建数据仓库</h6><blockquote>
+<p>步骤一：<a href="https://gitee.com/" target="_blank" rel="noopener">https://gitee.com/</a> 注册账号</p>
+<p>步骤二：<img src="D:%5CpythonStudy%5Cweb%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%5Cimage%5CSnipaste_2020-01-04_16-22-02.png" alt="Snipaste_2020-01-04_16-22-02"></p>
+</blockquote>
+<blockquote>
+<p>步骤三：填写仓库名称(要求：最好以python中变量命名规则{字母数字下划线,数字不能开头}来书写，不能出现中文) - 路径最好不要更改(Gitee会自动以仓库名作为路径)</p>
+<p>步骤四：仓库介绍随意；是否开源随意(区别其它用户能否访问)；后面的不用填写；如果有勾选请取消勾选！(理由待补充)</p>
+<p>步骤五：点击创建，仓库就建好了</p>
+<p>在这里打开你的仓库,复制SSH()地址($\color{red}{免密待补充}$)</p>
+<p><img src="D:%5CpythonStudy%5Cweb%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%5Cimage%5CSnipaste_2020-01-04_16-34-56.png" alt="Snipaste_2020-01-04_16-34-56"></p>
+</blockquote>
+<p>######2).PyCharm(社区)连接Gitee远程仓库</p>
+<blockquote>
+<p>打开PyCharm开始页面</p>
+<p><img src="D:%5CpythonStudy%5Cweb%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%5Cimage%5CSnipaste_2020-01-04_16-33-20.png" alt="Snipaste_2020-01-04_16-33-20"></p>
+<p>选择git方式(Gitee账号已建立免密) –&gt; 粘贴上面复制的SSH地址，选择clone文件位置</p>
+<p>打开项目，本地和远程仓库就建立好连接了</p>
+</blockquote>
+<h6 id="3-构建虚拟环境"><a href="#3-构建虚拟环境" class="headerlink" title="3)构建虚拟环境"></a>3)构建虚拟环境</h6><blockquote>
+<p>方法(settings/控制台构建)</p>
+<p>控制台构建: <code>windows: python -m venv venv/virtualenv</code></p>
+<p><code>Linux: source venv/bin/activate/&quot;venv/Scripts/activate&quot;</code></p>
+<p>安装第三方库(直接在setting中下载/控制台使用pip包管理工具)：</p>
+<p>django==2.2.9</p>
+<p>django-jet==1.0.8</p>
+<p>django-redis==4.11.0</p>
+<p>mysqlclient==1.4.6</p>
+<p>创建项目的依赖项文件：<code>pip freeze &gt; requirements.txt</code></p>
+<p>重建依赖项文件：<code>pip install -r requirements.txt</code></p>
+</blockquote>
+<h6 id="4-创建Django项目"><a href="#4-创建Django项目" class="headerlink" title="4)创建Django项目"></a>4)创建Django项目</h6><blockquote>
+<p><code>django-admin startproject 项目名称 .</code> - 注意后面有个点</p>
+</blockquote>
+<h6 id="5-创建Django应用"><a href="#5-创建Django应用" class="headerlink" title="5)创建Django应用"></a>5)创建Django应用</h6><p><code>python manage.py startapp polls</code></p>
+<p>– 异步请求，局部刷新</p>
+<h3 id="2-Django内置文件和待添加文件介绍"><a href="#2-Django内置文件和待添加文件介绍" class="headerlink" title="2.Django内置文件和待添加文件介绍"></a>2.Django内置文件和待添加文件介绍</h3><h6 id="1-settings-py-–-配置文件"><a href="#1-settings-py-–-配置文件" class="headerlink" title="1).settings.py – 配置文件"></a>1).settings.py – 配置文件</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文件中存在DATABASES的变量(这里连接远程服务器数据库示例)</span></span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysel'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">''</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>DEBUG</p>
+<p>APP添加</p>
+<p>LANGUAGE_CODE(语言选择)</p>
+<p>TIME_ZONE(时区位置)</p>
+<p>STATICFILES_DIRS(配置静态资源路径和URL前缀)</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
